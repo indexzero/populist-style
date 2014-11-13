@@ -1,4 +1,4 @@
-module.exports = {
+{
   //
   // No ESNext, yet. Sorry
   //
@@ -24,7 +24,11 @@ module.exports = {
   // Everywhere all the time, except that really
   // "else" should always be on a newline.
   //
-  "requireSpaceBeforeKeywords":  true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "while",
+    "catch"
+  ],
   "disallowSpaceBeforeKeywords": null,
 
   //
@@ -135,7 +139,11 @@ module.exports = {
   // One var statement per scope
   //
   "disallowMultipleVarDecl": null,
-  "requireMultipleVarDecl": "onevar",
+  //
+  // Remark (indexzero): this is currently up for debate on node-jscs
+  // https://github.com/jscs-dev/node-jscs/issues/768
+  //
+  "requireMultipleVarDecl": true,
 
   //
   // requireBlocksOnNewline
@@ -178,21 +186,45 @@ module.exports = {
     "do",
     "for",
     "if",
-    "else",
     "switch",
     "case",
     "try",
-    "catch",
     "while",
-    "with",
-    "return",
-    "function",
+    "return"
     //
     // Remark (indexzero): wat
     // "void",
-    // "typeof"
+    // "typeof",
+    // "with"
+    //
+    //
+    // Remark (indexzero): valid but ignored
+    //
+    // "function",
+    // "else",
+    // "catch",
+    //
+    // TODO (indexzero): Open an issue about "function"
     //
   ],
+
+  //
+  // disallowKeywordsOnNewLine
+  // requireKeywordsOnNewLine
+  // else goes on a newline always.
+  //
+  "requireKeywordsOnNewLine": [
+    "else",
+    "catch"
+    //
+    // Remark (indexzero): valid but ignored
+    //
+    // "return"
+    //
+    // TODO (indexzero): Open an issue about "return"
+    //
+  ],
+  "disallowKeywordsOnNewLine": null,
 
   //
   // disallowEmptyBlocks
@@ -213,7 +245,7 @@ module.exports = {
   // validateParameterSeparator
   // No for Objects, yes for Arrays & functions
   //
-  "requireSpacesInsideObjectBrackets":  true,
+  "requireSpacesInsideObjectBrackets":  "all",
   "disallowSpacesInsideArrayBrackets":  "all",
   "disallowSpacesInsideParentheses":    true,
   "disallowSpacesInsideObjectBrackets": null,
@@ -260,8 +292,8 @@ module.exports = {
   // As the author of `laxcomma` in JSHint I think
   // you know where I stand.
   //
-  "disallowCommaBeforeLineBreak": true,
-  "requireCommaBeforeLineBreak":  null,
+  "requireCommaBeforeLineBreak":  true,
+  "disallowCommaBeforeLineBreak": null,
 
   //
   // requireAlignedObjectValues
@@ -372,18 +404,13 @@ module.exports = {
   // TODO (indexzero): decide how far to take the loathing of
   // /* this style */ of comments.
   //
+  // Remark (indexzero): Currently a bug in jscs
+  // https://github.com/jscs-dev/node-jscs/issues/767
+  //
   "requireSpaceAfterLineComment":  true,
-  "requireCapitalizedComments":    true,
+  "requireCapitalizedComments":    null,
   "disallowSpaceAfterLineComment": null,
   "disallowCapitalizedComments":   null,
-
-  //
-  // disallowKeywordsOnNewLine
-  // requireKeywordsOnNewLine
-  // else goes on a newline always.
-  //
-  "requireKeywordsOnNewLine": ["else"],
-  "disallowKeywordsOnNewLine": null,
 
   //
   // maximumLineLength
@@ -424,7 +451,7 @@ module.exports = {
   // Java is to Javascript as Rock is to Rocketship.
   //
   "disallowNewlineBeforeBlockStatements": true,
-  "requireNewlineBeforeBlockStatements":  true,
+  "requireNewlineBeforeBlockStatements":  null,
 
   //
   // validateQuoteMarks
