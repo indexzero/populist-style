@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+var fs = require('fs'),
+    path = require('path');
+
+var home      = process.env.HOME || process.env.USERPROFILE,
+    filename  = path.join(home, '.jscsrc'),
+    isComment = /^\s+\/\//,
+    config;
+
+//
+// ### function stripNull (obj, key)
+// Deletes the `key` from the `obj` if the
+// value is EXPLICITLY null.
+//
+function stripNull(obj, key) {
+  if (obj[key] == null) {
+    delete obj[key];
+    return;
+  }
+
+  if (!Array.isArray(obj[key]) && typeof obj[key] === 'object') {
+    Object.keys(obj[key]).forEach(stripNull.bind(null, obj[key]));
+    if (!Object.keys(obj[key]).length) {
+      delete obj[key];
+    }
+  }
+}
+
+console.log('Read dotfile/.jscsrc');
+config = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'dotfiles', '.jscsrc'), 'utf8')
+    .split('\n')
+    .filter(function (line) {
+      return !isComment.test(line) && line.replace(/\s/g, '');
+    })
+    .join('\n')
+);
+
+console.log('Strip all `null` properties');
+Object.keys(config).forEach(stripNull.bind(null, config));
+
+console.log('Write to %s', filename);
+fs.writeFileSync(
+  filename,
+  JSON.stringify(config, null, 2),
+  'utf8'
+);
