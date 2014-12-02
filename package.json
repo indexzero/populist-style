@@ -1,0 +1,32 @@
+{
+  "name": "stylezero",
+  "version": "0.0.0",
+  "description": "The personal styleguide used by indexzero",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indexzero/styleguide"
+  },
+  "keywords": [
+    "styleguide",
+    "javascript",
+    "style-guide",
+    "jscs",
+    "jshint"
+  ],
+  "scripts": {
+    "prepublish": "./node_modules/.bin/fashion-show-build"
+  },
+  "bin": {
+    "stylezero": "./bin/styleguide"
+  },
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indexzero/styleguide/issues"
+  },
+  "homepage": "https://github.com/indexzero/styleguide",
+  "dependencies": {
+    "fashion-show": "*"
+  }
+}
