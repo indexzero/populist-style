@@ -1,6 +1,6 @@
 {
   "name": "stylezero",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The personal styleguide used by indexzero",
   "main": "index.js",
   "repository": {
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/indexzero/styleguide",
   "dependencies": {
-    "fashion-show": "*"
+    "fashion-show": "~1.0.0"
   }
 }
