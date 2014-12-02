@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var path = require('path');
+
+require('fashion-show')({
+  configDir: path.join(__dirname, '..', 'dist'),
+  targets: process.argv.splice(2)
+});
+
