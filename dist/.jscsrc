@@ -36,7 +36,6 @@
     "beforeOpeningRoundBrace": true
   },
   "disallowSpacesInCallExpression": true,
-  "requireMultipleVarDecl": true,
   "requireBlocksOnNewline": 1,
   "disallowPaddingNewlinesInBlocks": true,
   "requirePaddingNewlinesBeforeKeywords": [

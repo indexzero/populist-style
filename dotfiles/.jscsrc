@@ -140,10 +140,10 @@
   //
   "disallowMultipleVarDecl": null,
   //
-  // Remark (indexzero): this is currently up for debate on node-jscs
+  // Remark (indexzero): Readd this once this issue is fixed.
   // https://github.com/jscs-dev/node-jscs/issues/768
   //
-  "requireMultipleVarDecl": true,
+  "requireMultipleVarDecl": null,
 
   //
   // requireBlocksOnNewline
