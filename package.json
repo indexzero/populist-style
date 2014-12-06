@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/indexzero/styleguide",
   "dependencies": {
-    "fashion-show": "~1.0.0"
+    "fashion-show": "~2.0.0"
   }
 }
