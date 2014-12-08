@@ -178,8 +178,9 @@
   // requirePaddingNewlinesBeforeKeywords
   // Speaks for itself really.
   //
-  // TODO (indexzero): This requires more rigorous testing
-  // to see if it conforms to all of my neurotic style.
+  // Remark (indexzero): These should also accept an integer for
+  // minimum size of the block before throwing.
+  // See: https://github.com/jscs-dev/node-jscs/issues/826
   //
   "disallowPaddingNewlinesBeforeKeywords": null,
   "requirePaddingNewlinesBeforeKeywords": [
