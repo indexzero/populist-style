@@ -184,28 +184,28 @@
   //
   "disallowPaddingNewlinesBeforeKeywords": null,
   "requirePaddingNewlinesBeforeKeywords": [
-    "do",
-    "for",
-    "if",
-    "switch",
-    "case",
-    "try",
-    "while",
-    "return"
+    //
+    // Remark (indexzero): uncomment after #826 is resolved.
+    //
+    // "do",
+    // "for",
+    // "if",
+    // "switch",
+    // "case",
+    // "try",
+    // "while",
+    // "return"
     //
     // Remark (indexzero): wat
     // "void",
     // "typeof",
     // "with"
     //
-    //
     // Remark (indexzero): valid but ignored
     //
     // "function",
     // "else",
     // "catch",
-    //
-    // TODO (indexzero): Open an issue about "function"
     //
   ],
 
