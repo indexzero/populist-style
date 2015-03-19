@@ -38,16 +38,7 @@
   "disallowSpacesInCallExpression": true,
   "requireBlocksOnNewline": 1,
   "disallowPaddingNewlinesInBlocks": true,
-  "requirePaddingNewlinesBeforeKeywords": [
-    "do",
-    "for",
-    "if",
-    "switch",
-    "case",
-    "try",
-    "while",
-    "return"
-  ],
+  "requirePaddingNewlinesBeforeKeywords": [],
   "requireKeywordsOnNewLine": [
     "else",
     "catch"
