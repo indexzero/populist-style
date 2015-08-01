@@ -1,8 +1,9 @@
 {
   //
-  // No ESNext, yet. Sorry
+  // ESNext is ready for primetime.
+  // Lets do this.
   //
-  "esnext": false,
+  "esnext": true,
 
   //
   // requireCurlyBraces
@@ -41,6 +42,7 @@
   //
   // requireSpaceBeforeBlockStatements
   // Everywhere all the time.
+  // TODO (indexzero): revisit this.
   //
   "requireSpaceBeforeBlockStatements":  true,
   "disallowSpaceBeforeBlockStatements": null,
@@ -124,7 +126,6 @@
     "beforeOpeningCurlyBrace": null
   },
 
-
   //
   // requireSpacesInCallExpression
   // disallowSpacesInCallExpression
@@ -134,6 +135,7 @@
   "disallowSpacesInCallExpression": true,
 
   //
+  // Variable declarations
   // disallowMultipleVarDecl
   // requireMultipleVarDecl
   // One var statement per scope
@@ -144,6 +146,8 @@
   // https://github.com/jscs-dev/node-jscs/issues/768
   //
   "requireMultipleVarDecl": null,
+  "requireLineBreakAfterVariableAssignment": null,
+  "requirePaddingNewLineAfterVariableDeclaration": null,
 
   //
   // requireBlocksOnNewline
@@ -214,18 +218,14 @@
   // requireKeywordsOnNewLine
   // else goes on a newline always.
   //
-  "requireKeywordsOnNewLine": [
+  // Remark (indexzero): valid but ignored "return"
+  // TODO (indexzero): Open an issue about "return"
+  //
+  "requireKeywordsOnNewLine": null,
+  "disallowKeywordsOnNewLine": [
     "else",
     "catch"
-    //
-    // Remark (indexzero): valid but ignored
-    //
-    // "return"
-    //
-    // TODO (indexzero): Open an issue about "return"
-    //
   ],
-  "disallowKeywordsOnNewLine": null,
 
   //
   // disallowEmptyBlocks
@@ -266,6 +266,24 @@
   "requireDotNotation":          true,
 
   //
+  // Semicolons. They are required.
+  // ... deal with it. And no comma-first.
+  //
+  "disallowSemicolons": null,
+  // TODO: Re-add these when they don't fail.
+  // "disallowSpaceBeforeComma": true,
+  // "disallowSpaceBeforeSemicolon": true,
+  "requireSemicolons": true,
+  "requireSpaceBeforeComma": null,
+
+  //
+  // Arguments.
+  // Obviously there should be a space.
+  //
+  "disallowSpaceBetweenArguments": null,
+  "requireSpaceBetweenArguments": true,
+
+  //
   // disallowDanglingUnderscores
   // Really these are only OK in `this._value` usage.
   //
@@ -275,6 +293,7 @@
   "disallowDanglingUnderscores": null,
 
   //
+  // Object declaration and keys
   // disallowSpaceAfterObjectKeys
   // requireSpaceBeforeObjectValues
   // requireSpaceAfterObjectKeys
@@ -286,6 +305,11 @@
   "requireSpaceBeforeObjectValues":  true,
   "requireSpaceAfterObjectKeys":     null,
   "disallowSpaceBeforeObjectValues": null,
+  //
+  // TODO (indexzero): make a decision about this
+  //
+  "disallowObjectKeysOnNewLine": null,
+  "requireObjectKeysOnNewLine": null,
 
   //
   // disallowCommaBeforeLineBreak
@@ -309,9 +333,11 @@
   "requireAlignedObjectValues": null,
 
   //
+  // disallowOperatorBeforeLineBreak
   // requireOperatorBeforeLineBreak
   // TODO (indexzero): Make sure this conforms to my own crazy style
   //
+  "disallowOperatorBeforeLineBreak": null,
   "requireOperatorBeforeLineBreak": null,
 
   //
@@ -372,11 +398,11 @@
 
   //
   // disallowMultipleLineBreaks
+  // disallowMultipleSpaces
   // disallowMixedSpacesAndTabs
   // disallowTrailingWhitespace
   // requireLineFeedAtFileEnd
   // requireSpaceAfterLineComment
-  // disallowSpaceAfterLineComment
   // disallowTrailingComma
   // requireTrailingComma
   // validateLineBreaks
@@ -387,6 +413,7 @@
   // file, not just indivitual lines.
   //
   "disallowMultipleLineBreaks":    true,
+  "disallowMultipleSpaces":        null,
   "disallowMixedSpacesAndTabs":    true,
   "disallowTrailingWhitespace":    true,
   "requireLineFeedAtFileEnd":      true,
@@ -402,10 +429,8 @@
   // disallowCapitalizedComments
   // Everything that has to do with comments.
   //
-  // TODO (indexzero): decide how far to take the loathing of
-  // /* this style */ of comments.
   //
-  // Remark (indexzero): Currently a bug in jscs
+  // TODO (indexzero): See if this jscs bug was resolved:
   // https://github.com/jscs-dev/node-jscs/issues/767
   //
   "requireSpaceAfterLineComment":  true,
@@ -414,24 +439,26 @@
   "disallowCapitalizedComments":   null,
 
   //
+  // Maximum lengths
   // maximumLineLength
-  // TODO (indexzero): Make a decision on this.
   //
-  "maximumLineLength": null,
+  "maximumLineLength": 100,
+  "maximumNumberOfLines": null,
 
   //
   // requireYodaConditions
   // disallowYodaConditions
   // Wrong are you about yoda conditions use them do you if.
+  // Not complain I will because funny I find you.
   //
-  "disallowYodaConditions": true,
+  "disallowYodaConditions": null,
   "requireYodaConditions":  null,
 
   //
   // disallowAnonymousFunctions
   // requireAnonymousFunctions
   // My stance on these is that I prefer named functions
-  // but I'm not strict about it. Maybe I should be.
+  // but I'm not strict about it.
   //
   "disallowAnonymousFunctions": null,
   "requireAnonymousFunctions":  null,
@@ -453,6 +480,51 @@
   //
   "disallowNewlineBeforeBlockStatements": true,
   "requireNewlineBeforeBlockStatements":  null,
+
+  //
+  // Miscellaneous (and new since 1.whatever)
+  // disallowDanglingUnderscores
+  //
+  // TODO (indexzero): look at these more closely.
+  //
+  "disallowDanglingUnderscores": null,
+  "disallowIdentifierNames": null,
+  "disallowImplicitTypeConversion": null,
+  "disallowKeywordsInComments": null,
+  "disallowNamedUnassignedFunctions": null,
+  "disallowNodeTypes": null,
+  "disallowNotOperatorsInConditionals": null,
+  "disallowPaddingNewLinesAfterBlocks": null,
+  "disallowPaddingNewLinesAfterUseStrict": null,
+  "disallowPaddingNewLinesBeforeExport": null,
+  "disallowPaddingNewLinesBeforeLineComments": null,
+  "disallowSpacesInForStatement": null,
+  "disallowSpacesInsideBrackets": null,
+  "requireDollarBeforejQueryAssignment": null,
+  "requireMatchingFunctionName": null,
+  "requireNamedUnassignedFunctions": null,
+  "requireNumericLiterals": null,
+  "requirePaddingNewLinesAfterBlocks": null,
+  "requirePaddingNewLinesAfterUseStrict": null,
+  "requirePaddingNewLinesBeforeExport": null,
+  "requirePaddingNewLinesBeforeLineComments": null,
+  "requireSpacesInForStatement": null,
+  "requireSpacesInsideBrackets": null,
+  "safeContextKeyword": ["self", "that"],
+  //
+  // TODO (indexzero): continue after safeContextKeyword!!
+  //
+
+  //
+  // ES6
+  // disallowParenthesesAroundArrowParam
+  //
+  // TODO: Re-add these when they don't fail.
+  // "disallowParenthesesAroundArrowParam": null,
+  // "requireParenthesesAroundArrowParam": true,
+  "requireArrowFunctions": null,
+  "requireSpread": null,
+  "requireTemplateStrings": null,
 
   //
   // validateQuoteMarks
