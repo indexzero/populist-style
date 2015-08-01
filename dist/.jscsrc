@@ -1,5 +1,5 @@
 {
-  "esnext": false,
+  "esnext": true,
   "requireCurlyBraces": [
     "if",
     "else",
@@ -39,7 +39,7 @@
   "requireBlocksOnNewline": 1,
   "disallowPaddingNewlinesInBlocks": true,
   "requirePaddingNewlinesBeforeKeywords": [],
-  "requireKeywordsOnNewLine": [
+  "disallowKeywordsOnNewLine": [
     "else",
     "catch"
   ],
@@ -50,6 +50,8 @@
   "validateParameterSeparator": ", ",
   "disallowQuotedKeysInObjects": true,
   "requireDotNotation": true,
+  "requireSemicolons": true,
+  "requireSpaceBetweenArguments": true,
   "disallowSpaceAfterObjectKeys": true,
   "requireSpaceBeforeObjectValues": true,
   "requireCommaBeforeLineBreak": true,
@@ -71,9 +73,13 @@
   "validateLineBreaks": "LF",
   "validateIndentation": 2,
   "requireSpaceAfterLineComment": true,
-  "disallowYodaConditions": true,
+  "maximumLineLength": 100,
   "requireFunctionDeclarations": true,
   "disallowNewlineBeforeBlockStatements": true,
+  "safeContextKeyword": [
+    "self",
+    "that"
+  ],
   "validateQuoteMarks": {
     "mark": "'",
     "escape": true
