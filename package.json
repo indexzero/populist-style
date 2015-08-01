@@ -15,7 +15,7 @@
     "jshint"
   ],
   "scripts": {
-    "prepublish": "./node_modules/.bin/fashion-show-build"
+    "prepublish": "fashion-show-build"
   },
   "bin": {
     "stylezero": "./bin/styleguide"
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/indexzero/styleguide",
   "dependencies": {
-    "fashion-show": "~2.0.1"
+    "fashion-show": "~2.0.1",
+    "jscs": "^2.0.0",
+    "jshint": "^2.8.0"
   }
 }
