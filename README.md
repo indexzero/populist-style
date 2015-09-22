@@ -1,4 +1,4 @@
-# Javascript Styleguide
+# Common Style for JavaScript
 
 > If you have comments on this or **disagree about rules** then
 > please reach out to me directly. I want to hear it!

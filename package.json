@@ -1,16 +1,19 @@
 {
-  "name": "stylezero",
+  "name": "common-style",
   "version": "2.3.0",
-  "description": "The personal styleguide used by indexzero",
+  "description": "The most common choices by most JavaScript developers, probably",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/indexzero/styleguide"
+    "url": "https://github.com/indexzero/common-style"
   },
   "keywords": [
     "styleguide",
     "javascript",
     "style-guide",
+    "common-style",
+    "standard style",
+    "standard",
     "jscs",
     "jshint"
   ],
@@ -18,14 +21,14 @@
     "prepublish": "fashion-show-build"
   },
   "bin": {
-    "stylezero": "./bin/styleguide"
+    "common": "./bin/styleguide"
   },
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/indexzero/styleguide/issues"
+    "url": "https://github.com/indexzero/common-style/issues"
   },
-  "homepage": "https://github.com/indexzero/styleguide",
+  "homepage": "https://github.com/indexzero/common-style",
   "dependencies": {
     "fashion-show": "^3.2.1",
     "jscs": "^2.1.1",
