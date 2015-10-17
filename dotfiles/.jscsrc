@@ -487,29 +487,34 @@
   //
   // TODO (indexzero): look at these more closely.
   //
-  "disallowDanglingUnderscores": null,
-  "disallowIdentifierNames": null,
-  "disallowImplicitTypeConversion": null,
   "disallowKeywordsInComments": null,
+  "disallowPaddingNewLinesBeforeLineComments": null,
+  "requirePaddingNewLinesBeforeLineComments": null,
+
   "disallowNamedUnassignedFunctions": null,
-  "disallowNodeTypes": null,
-  "disallowNotOperatorsInConditionals": null,
+
   "disallowPaddingNewLinesAfterBlocks": null,
   "disallowPaddingNewLinesAfterUseStrict": null,
   "disallowPaddingNewLinesBeforeExport": null,
-  "disallowPaddingNewLinesBeforeLineComments": null,
-  "disallowSpacesInForStatement": null,
-  "disallowSpacesInsideBrackets": null,
-  "requireDollarBeforejQueryAssignment": null,
-  "requireMatchingFunctionName": null,
-  "requireNamedUnassignedFunctions": null,
-  "requireNumericLiterals": null,
   "requirePaddingNewLinesAfterBlocks": null,
   "requirePaddingNewLinesAfterUseStrict": null,
   "requirePaddingNewLinesBeforeExport": null,
-  "requirePaddingNewLinesBeforeLineComments": null,
+
+  "disallowSpacesInForStatement": null,
+  "disallowSpacesInsideBrackets": null,
   "requireSpacesInForStatement": null,
   "requireSpacesInsideBrackets": null,
+
+  "disallowIdentifierNames": null,
+  "disallowImplicitTypeConversion": null,
+  "requireMatchingFunctionName": null,
+  "requireNamedUnassignedFunctions": null,
+
+
+  "disallowNodeTypes": null,
+  "disallowNotOperatorsInConditionals": null,
+  "requireDollarBeforejQueryAssignment": null,
+  "requireNumericLiterals": null,
   "safeContextKeyword": ["self", "that"],
   //
   // TODO (indexzero): continue after safeContextKeyword!!
