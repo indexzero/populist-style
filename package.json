@@ -1,6 +1,6 @@
 {
   "name": "common-style",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "The most common choices by most JavaScript developers, probably",
   "main": "index.js",
   "repository": {
