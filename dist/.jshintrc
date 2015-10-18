@@ -5,6 +5,7 @@
   "node": true,
   "rhino": false,
   "couch": true,
+  "mocha": true,
   "wsh": true,
   "jquery": true,
   "prototypejs": false,
