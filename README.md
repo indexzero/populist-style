@@ -1,7 +1,7 @@
 # Populist Style for JavaScript
 
-_A (one day) auto-updating style at the mercy of the people, and only the
-_people.
+A (one day) auto-updating style at the mercy of the people, and only the
+people.
 
 Today it is still a bespoke set of rules. One has to have goals, no? The copy
 below is unfortunately a bit out of date compared to the latest `eslint` rules
