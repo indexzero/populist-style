@@ -1,11 +1,11 @@
 {
-  "name": "common-style",
+  "name": "eslint-config-populist",
   "version": "3.1.0",
-  "description": "The most common choices by most JavaScript developers, probably",
+  "description": "A (one day) auto-updating style at the mercy of the people, and only the people.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/indexzero/common-style"
+    "url": "https://github.com/indexzero/populist-style"
   },
   "keywords": [
     "styleguide",
@@ -13,25 +13,21 @@
     "style-guide",
     "common-style",
     "standard style",
-    "standard",
-    "jscs",
-    "jshint"
+    "standard"
   ],
-  "scripts": {
-    "prepublish": "fashion-show-build"
-  },
   "bin": {
-    "common": "./bin/styleguide"
+    "common": "./bin/eslint-autofix.js"
   },
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/indexzero/common-style/issues"
+    "url": "https://github.com/indexzero/populist-style/issues"
   },
-  "homepage": "https://github.com/indexzero/common-style",
+  "homepage": "https://github.com/indexzero/populist-style",
   "dependencies": {
-    "fashion-show": "^3.2.1",
-    "jscs": "^2.1.1",
-    "jshint": "^2.8.0"
+    "eslint": "^4.3.0",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-mocha": "^4.8.0"
   }
 }

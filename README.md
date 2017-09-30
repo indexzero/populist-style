@@ -1,4 +1,12 @@
-# Common Style for JavaScript
+# Populist Style for JavaScript
+
+_A (one day) auto-updating style at the mercy of the people, and only the
+_people.
+
+Today it is still a bespoke set of rules. One has to have goals, no? The copy
+below is unfortunately a bit out of date compared to the latest `eslint` rules
+in `index.js`. They remain because reusing the English copy is very likely
+even with new and/or slightly different rules.
 
 > If you have comments on this or **disagree about rules** then
 > please reach out to me directly. I want to hear it!
@@ -1669,3 +1677,12 @@ var Q = require('q');
 
 * https://github.com/cloudhead/styleguide/blob/master/JavaScript.md
 * https://github.com/airbnb/javascript
+
+> The following files include software modified from <br>
+> `eslint-config-godaddy` with attribution under MIT <br>
+> © GoDaddy Operating Company 2016 <br>
+> ```
+> index.js
+> bin/eslint-autofix.js
+> ```
+> Modifications © Charlie Robbins 2017
